@@ -1,0 +1,11 @@
+-> python manage.py startapp meetups (to make an app)
+-> return an HttpResponse inside views for that app
+-> add urls in local urls.py file inside meetups folder
+-> add urls using path('', include('meetups.urls')) inside global urls.py
+-> python manage.py runserver to run that app   
+-> make a templates/meetups folder inside meetups to add HTML templates
+-> use render(requests, 'meetups/index.html') to return an HTTP response for template
+-> {% load static %} then <link rel="stylesheet" href="{% static "meetups/base.css" %}"> to load css
+-> python manage.py makemigrations to create a model database
+-> python manage.py migrate to execute migrations
+-> add fields in admin page using class MeetupAdmin(admin.ModelAdmin): inside list_display() and can also add list_filter

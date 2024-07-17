@@ -1,0 +1,42 @@
+{% extends 'meetups/base.html' %}
+{% load static %}
+
+{% block title_name %}All Meetups{% endblock %}
+
+{% block css_file %}
+<link rel="stylesheet" href="{% static "meetups/registration_confirmation.css" %}"> 
+{% endblock %}
+
+{% block main_heading %}We got great meetups coming up!{% endblock %}
+{% block details %}Join us!{% endblock %}
+
+{% block body %}
+        <section>
+        {% if show_meetups %}
+        <ol>
+            {% for meet in meetups %}
+            {% comment %} <li class="meetup-item">
+                <article>
+                    <div class="meetup-summary">
+                        <div class="meetup-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="meetup-details">
+                            <h3> {{meet.title}} </h3>
+                            <address> {{meet.location}} </address>
+                        </div>
+                    </div>
+                    <div class="meetup-actions">
+                        <a href="{% url 'meetup_item' meet.slug %}" class="btn">More Details</a>
+                    </div>
+                </article>
+            </li> {% endcomment %}
+            {% include 'meetups/includes/meetup_item_list.html' with title=meet.title %}
+            {% endfor %}
+        </ol>
+        {% else %}
+            <p>There are no meetups</p>
+        {% endif %}
+        </section>
+{% endblock %}
+    

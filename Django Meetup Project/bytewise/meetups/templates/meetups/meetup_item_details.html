@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> {{ meetup_details.title }} </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "meetups/base.css" %}">
+        <link rel="stylesheet" href="{% static "meetups/all_meetups.css" %}">
+        <link rel="stylesheet" href="{% static "meetups/meetup_details.css" %}">
+        <link rel="stylesheet" href="{% static "meetups/registration_confirmation.css" %}">
+    </head>
+    <body>
+        <section id="location">
+            <img id="main-image" src="{{meetup_details.image.url}}" alt="meetup image">
+            <h1> {{ meetup_details.title }} </h1>
+            <h2>Meetup Location</h2>
+            <address>This meetup will take place in <span> {{ meetup_details.location }} </span>.</address>
+        </section>
+        <section id="details">
+            <h2>Meetup Details</h2>
+            <p>{{ meetup_details.description }}</p>
+        </section>
+        <section id="registration">
+            <h1>Join us!</h1>
+            <form action="{% url 'meetup_item' meetup_details.slug  %}" method="POST">
+                {% csrf_token %}
+                <ul>
+                {{ form.as_ul }}
+                </ul>
+                <div id="registration-actions">
+                    <button type="submit">Register</button>
+                </div> 
+            </form>
+        </section>
+        <script src="" async defer></script>
+    </body>
+</html>
