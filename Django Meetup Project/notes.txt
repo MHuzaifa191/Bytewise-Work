@@ -1,4 +1,5 @@
 -> django-admin startproject projectname
+-> cd projectname
 -> python manage.py startapp meetups (to make an app)
 -> return an HttpResponse inside views for that app
 -> add urls in local urls.py file inside meetups folder
