@@ -14,7 +14,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core'
+    'core',
+
+        # Allauth apps
+    'django.contrib.sites',  # Required by allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',  # Enables social login
+    # Add social providers (optional)
+    'allauth.socialaccount.providers.google',  # Example: Google OAuth2 provider
+    'allauth.socialaccount.providers.facebook',  # Example: Facebook OAuth2 provider
 ]
 
 MIDDLEWARE = [
@@ -24,8 +33,12 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware'
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    # Add this middleware required by allauth
+    'allauth.account.middleware.AccountMiddleware',
 ]
+
 
 ROOT_URLCONF = 'demo.urls'
 
@@ -75,3 +88,25 @@ if ENVIRONMENT == 'production':
     SECURE_REDIRECT_EXEMPT = []
     SECURE_SSL_REDIRECT = True
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+# AUTH
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Default authentication backend
+]
+
+SITE_ID = 1
+
+# settings.py
+
+# Redirect URLs
+LOGIN_REDIRECT_URL = '/'  # Redirect after successful login
+LOGOUT_REDIRECT_URL = '/'  # Redirect after logout
+
+# Email Verification
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'  # Can be 'optional' or 'none'
+ACCOUNT_EMAIL_REQUIRED = True
+
+# Other optional settings
+ACCOUNT_USERNAME_REQUIRED = True
+SOCIALACCOUNT_QUERY_EMAIL = True
