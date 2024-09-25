@@ -1,0 +1,532 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Huzaifa's Portfolio</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'PortFolioApp/assets/favicon.ico' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'PortFolioApp/css/styles.css' %}" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">Huzaifa's Portfolio</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary-1 text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-3">Muhammad Huzaifa</h1>
+                <!-- Icon Divider-->
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Python/MERN Full-Stack Developer</p>
+            </div>
+            
+            <div class="container d-flex align-items-center flex-column mt-5">
+                <div class="row w-100 my-4">
+                    <!-- Left Column: Frontend -->
+                    <div class="col-md-5 text-right">
+                        <h1 class="masthead-random-text mb-0">&lt;frontend&gt;</h1>
+                        <!-- Description for Frontend -->
+                        <p class="text-light">Creating responsive and dynamic user interfaces<br>using React, HTML, CSS, and JavaScript.</p>
+                    </div>
+                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                        <!-- Vertical Line -->
+                        <div style="border-left: 2px solid white; height: 100%;"></div>
+                    </div>
+                    <!-- Right Column: Backend -->
+                    <div class="col-md-5 text-left">
+                        <h1 class="masthead-random-text mb-0">backend.py</h1>
+                        <!-- Description for Backend -->
+                        <p class="text-light">Developing secure and scalable APIs using<br>Django, Flask, Node.js, and MongoDB.</p>
+                    </div>
+                </div>
+            </div>    
+        </header>
+        
+        <!-- Portfolio Section-->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <div class="twelve mb-5">
+                    <h1 class="heading-style">Portfolio</h1>
+                </div>
+                <!-- Icon Divider-->
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="static/PortfolioApp/assets/img/portfolio/activity_sentinel.jpg" alt="..." />
+                        </div>
+                        <p class="masthead-subheading font-weight-light mb-0 mt-2 text-center caption">Activity Sentinel</p>
+                    </div>
+                    <!-- Portfolio Item 2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="{% static 'PortfolioApp/assets/img/portfolio/blog.png' %}" alt="..." />
+                        </div>
+                        <p class="masthead-subheading font-weight-light mb-0 mt-2 text-center caption">Post Pal</p>
+                    </div>
+                    <!-- Portfolio Item 3-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="{% static 'PortfolioApp/assets/img/portfolio/timetable.jpg' %}" alt="..." />
+                        </div>
+                        <p class="masthead-subheading font-weight-light mb-0 mt-2 text-center caption">Timetable Scheduler</p>
+                    </div>
+                    <!-- Portfolio Item 4-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="{% static 'PortfolioApp/assets/img/portfolio/sms.png' %}" alt="..." />
+                        </div>
+                        <p class="masthead-subheading font-weight-light mb-0 mt-2 text-center caption">Societies Management System</p>
+                    </div>
+                    <!-- Portfolio Item 5-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="{% static 'PortfolioApp/assets/img/portfolio/cms.png' %}" alt="..." />
+                        </div>
+                        <p class="masthead-subheading font-weight-light mb-0 mt-2 text-center caption">Cafeteria Management System</p>
+                    </div>
+                    <!-- Portfolio Item 6-->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="{% static 'PortfolioApp/assets/img/portfolio/django.png' %}" alt="..." />
+                        </div>
+                        <p class="masthead-subheading font-weight-light mb-0 mt-2 text-center caption">Django Applications</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white mb-5">About Me</h2>
+                <!-- Icon Divider-->
+                <!-- About Section Content-->
+                <div class="container mr-5 ml-5">
+                    <div class="ms-auto mr-5 ml-5"><p class="lead" style="text-align: justify;">
+                        As a dedicated Full-Stack Web Developer, I bring a wealth of experience 
+                        in crafting high-quality, scalable websites and web applications. With a 
+                        strong command of Django, Flask, and the MERN stack, I specialize in building 
+                        seamless digital experiences that align perfectly with your business objectives. 
+                        My approach to development is rooted in a deep understanding of both front-end 
+                        and back-end technologies. Whether it's creating dynamic web applications or 
+                        designing user-friendly interfaces, I ensure that every project I work on 
+                        is optimized for performance and security.</p>
+                    </div>
+                </div>
+                <!-- About Section Button-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="https://www.linkedin.com/in/mhuzaifa191/" target="_blank">
+                        LinkedIn
+                        <i class="fab fa-fw fa-linkedin-in" style="margin-left: 5px;"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom mb-5">
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Form-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7">
+                        <form id="contactForm" action="/contact" method="post">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Full name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">Phone number</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" name="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <!-- Submit Button-->
+                            <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            Eastridge, Rawalpindi
+                            <br />
+                            Pakistan
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/mo.huzayfa"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/mhuzaifa191/"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                        <p class="lead mb-0">
+                            +923345161678
+                        </p>
+                        <p class="lead mb-0">
+                            m.huz4if4@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; Huzaifa's Portfolio 2024</small></div>
+        </div>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio Modal 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Activity Sentinel</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Carousel-->
+                                    <div id="portfolioCarousel1" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img class="d-block w-100 img-fluid-2 rounded mb-5" src="{% static 'PortfolioApp/assets/img/screenshots/ActivitySentinel1.png' %}" alt="First slide" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 img-fluid-2 rounded mb-5" src="{% static 'PortfolioApp/assets/img/screenshots/ActivitySentinel2.png' %}" alt="Second slide" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 img-fluid-2 rounded mb-5" src="{% static 'PortfolioApp/assets/img/screenshots/ActivitySentinel3.png' %}" alt="Third slide" />
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel1" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel1" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">
+                                        During my internship at ProtectLab, I developed this cybersecurity tool which records user activity and lets the user see it once he logs in. It was developed using <i>FLASK</i> for the backend and <i>REACT</i> for the frontend.
+                                    </p>
+                                    <a href="https://github.com/MHuzaifa191/Activity-Sentinel" title="Activity Sentinel" class="btn btn-primary" target="_blank">
+                                        <i class="fa-brands fa-github" style="margin-right: 7px;"></i>
+                                        Github Link
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Portfolio Modal 2-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Post Pal</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Carousel-->
+                                    <div id="portfolioCarousel2" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img class="d-block w-100 img-fluid-2 rounded mb-5" src="{% static 'PortfolioApp/assets/img/screenshots/PostPal0.png.png' %}" alt="First slide" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 img-fluid-2 rounded mb-5" src="{% static 'PortfolioApp/assets/img/screenshots/PostPal1.png.png' %}" alt="Second slide" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 img-fluid-2 rounded mb-5" src="{% static 'PortfolioApp/assets/img/screenshots/PostPal2.png.png' %}" alt="Third slide" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 img-fluid-2 rounded mb-5" src="{% static 'PortfolioApp/assets/img/screenshots/PostPal3.png.png' %}" alt="Third slide" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 img-fluid-2 rounded mb-5" src="{% static 'PortfolioApp/assets/img/screenshots/PostPal4.png.png' %}" alt="Third slide" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 img-fluid-2 rounded mb-5" src="{% static 'PortfolioApp/assets/img/screenshots/PostPal5.png.png' %}" alt="Third slide" />
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel2" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel2" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mt-4 mb-5" style="text-align: justify;">
+                                        Developed a full-stack blog application using Flask, SQLAlchemy, and Bootstrap, featuring user authentication,
+                                        post creation, and commenting functionality. Implemented role-based access control (RBAC) to restrict post creation and deletion to verified users only. 
+                                        Integrated CKEditor for rich text editing and Gravatar for user avatars in comments.
+                                        Designed and implemented a relational database schema with SQLAlchemy ORM, including models for Users,
+                                        BlogPosts, and Comments, ensuring referential integrity with foreign key constraints.
+                                        Utilized Flask-Login for managing user sessions and Flask-WTF for form handling
+                                        Stored salted and hashed passwords with Python-Werkzeug to ensure user safety.
+                                    </p>
+                                    <a href="https://github.com/MHuzaifa191/100-days-of-coding-with-python/tree/master/Web%20Development" title="Activity Sentinel" class="btn btn-primary mt-2" target="_blank">
+                                        <i class="fa-brands fa-github" style="margin-right: 7px;"></i>
+                                        Github Link
+                                    </a>           
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 3-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Timetable Scheduler</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="{% static 'PortfolioApp/assets/img/portfolio/timetable.jpg' %}" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mt-4 mb-4" style="text-align: justify;">
+                                        This is a timetable scheduler I made for my Artificial Intelligence course project. It uses python and the genetic algorithm to run for hundred generations and allocate all the teachers courses and classrooms to create a clashless timetable for the whole week.
+                                    </p>
+                                    <a href="https://github.com/MHuzaifa191/Timetable-Generator" title="Activity Sentinel" class="btn btn-primary mt-2" target="_blank">
+                                        <i class="fa-brands fa-github" style="margin-right: 7px;"></i>
+                                        Github Link
+                                    </a>         
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 4-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Societies Management System</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="{% static 'PortfolioApp/assets/img/screenshots/SocietiesManagementSystem.png' %}" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mt-4 mb-4" style="text-align: justify;">
+                                        This is a societies management system I made for my Software Engineering course project. It uses C# and Microsoft SQL server for the backend. It manages all the societies events, students joining and roles allocation. There are three roles; Mentor, President and Member.
+                                    </p>
+                                    <a href="https://github.com/MHuzaifa191/Societies-Management-System" title="Activity Sentinel" class="btn btn-primary mt-2" target="_blank">
+                                        <i class="fa-brands fa-github" style="margin-right: 7px;"></i>
+                                        Github Link
+                                    </a>         
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 5-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Cafeteria Management System</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="{% static 'PortfolioApp/assets/img/portfolio/cms.png' %}" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mt-4 mb-4" style="text-align: justify;">
+                                        This is a cafeteria management system I made for my Database course project. It handles all the cafeteria related micro transactions. This was also developed using Microsoft SQL server and C#.
+                                    </p>
+                                    <a href="https://github.com/MHuzaifa191/Cafeteria-Management-System" title="Activity Sentinel" class="btn btn-primary mt-2" target="_blank">
+                                        <i class="fa-brands fa-github" style="margin-right: 7px;"></i>
+                                        Github Link
+                                    </a>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 6-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Django Applications</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="{% static 'PortfolioApp/assets/img/portfolio/django.png' %}" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mt-4 mb-4" style="text-align: justify;">During my fellowship at bytewise, I was in the django track. I developed multiple full-stack applications using the Django framework.</p>
+                                    <a href="https://github.com/MHuzaifa191/Bytewise-Work" title="Activity Sentinel" class="btn btn-primary mt-2" target="_blank">
+                                        <i class="fa-brands fa-github" style="margin-right: 7px;"></i>
+                                        Github Link
+                                    </a>       
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'PortfolioApp/js/scripts.js' %}"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
